@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Tokyo · Viaggio in Giappone</title>
+<link rel="stylesheet" href="../style.css">
+<script src="../script.js" defer></script>
+</head>
+<body>
+<div class="wrap">
+  <div class="hero">
+    <div class="jp">東京</div>
+    <div class="symbol">🗼</div>
+    <h1>Tokyo</h1>
+    <div class="subtitle">Dall’antica Edo alla metropoli</div>
+  </div>
+
+  <div class="card"><div class="label">Dove siamo</div><p>Sulla costa orientale dell’isola di Honshū.</p></div>
+  <div class="card"><div class="label">Lo sapevi che?</div><p>Tokyo è una delle più grandi metropoli del mondo. Prima di chiamarsi Tokyo, la città era conosciuta come Edo.</p></div>
+  <div class="card"><div class="label">Perché è speciale</div><p>Quartieri modernissimi convivono con santuari, giardini e tradizioni secolari.</p></div>
+  <div class="card"><div class="label">Una parola giapponese</div><div class="word">町 — machi</div><p>Città o quartiere</p></div>
+  <div class="card quiz" data-correct-text="Edo">
+    <div class="label">La domanda del viaggiatore</div>
+    <h2>Come si chiamava Tokyo prima del nome attuale?</h2>
+    <button onclick="checkAnswer(this, true)">Edo</button><button onclick="checkAnswer(this, false)">Nikko</button><button onclick="checkAnswer(this, false)">Sapporo</button>
+    <div class="result"></div>
+  </div>
+
+  <a class="back" href="../">← Torna al viaggio</a>
+  <div class="footer">Tappa completata ✓ · 日本を発見しよう</div>
+</div>
+</body>
+</html>

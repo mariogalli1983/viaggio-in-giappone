@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Okinawa · Viaggio in Giappone</title>
+<link rel="stylesheet" href="../style.css">
+<script src="../script.js" defer></script>
+</head>
+<body>
+<div class="wrap">
+  <div class="hero">
+    <div class="jp">沖縄</div>
+    <div class="symbol">🌺</div>
+    <h1>Okinawa</h1>
+    <div class="subtitle">Il Giappone tropicale</div>
+  </div>
+
+  <div class="card"><div class="label">Dove siamo</div><p>Nel sud del Giappone, in un arcipelago tra il Kyūshū e Taiwan.</p></div>
+  <div class="card"><div class="label">Lo sapevi che?</div><p>Okinawa è famosa per il mare limpido, le barriere coralline e una cultura con caratteristiche proprie rispetto al resto del Giappone.</p></div>
+  <div class="card"><div class="label">Perché è speciale</div><p>Per secoli l’area appartenne al Regno delle Ryūkyū.</p></div>
+  <div class="card"><div class="label">Una parola giapponese</div><div class="word">島 — shima</div><p>Isola</p></div>
+  <div class="card quiz" data-correct-text="Mare tropicale e isole">
+    <div class="label">La domanda del viaggiatore</div>
+    <h2>Che tipo di paesaggio rende famosa Okinawa?</h2>
+    <button onclick="checkAnswer(this, true)">Mare tropicale e isole</button><button onclick="checkAnswer(this, false)">Deserti di sabbia</button><button onclick="checkAnswer(this, false)">Ghiacciai</button>
+    <div class="result"></div>
+  </div>
+
+  <a class="back" href="../">← Torna al viaggio</a>
+  <div class="footer">Tappa completata ✓ · 日本を発見しよう</div>
+</div>
+</body>
+</html>
