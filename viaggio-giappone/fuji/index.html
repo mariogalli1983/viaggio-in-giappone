@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Monte Fuji · Viaggio in Giappone</title>
+<link rel="stylesheet" href="../style.css">
+<script src="../script.js" defer></script>
+</head>
+<body>
+<div class="wrap">
+  <div class="hero">
+    <div class="jp">富士山</div>
+    <div class="symbol">🗻</div>
+    <h1>Monte Fuji</h1>
+    <div class="subtitle">La montagna sacra del Giappone</div>
+  </div>
+
+  <div class="card"><div class="label">Dove siamo</div><p>Isola di Honshū, tra le prefetture di Shizuoka e Yamanashi.</p></div>
+  <div class="card"><div class="label">Lo sapevi che?</div><p>Con i suoi 3.776 metri, il Fuji è la montagna più alta del Giappone. È un vulcano dalla forma quasi perfettamente simmetrica ed è uno dei simboli più riconoscibili del Paese.</p></div>
+  <div class="card"><div class="label">Perché è speciale</div><p>Per secoli è stato meta di pellegrinaggi e ha ispirato artisti, poeti e viaggiatori.</p></div>
+  <div class="card"><div class="label">Una parola giapponese</div><div class="word">山 — yama</div><p>Montagna</p></div>
+  <div class="card quiz" data-correct-text="3.776 metri">
+    <div class="label">La domanda del viaggiatore</div>
+    <h2>Quanto è alto il Monte Fuji?</h2>
+    <button onclick="checkAnswer(this, true)">3.776 metri</button><button onclick="checkAnswer(this, false)">2.945 metri</button><button onclick="checkAnswer(this, false)">4.121 metri</button>
+    <div class="result"></div>
+  </div>
+
+  <a class="back" href="../">← Torna al viaggio</a>
+  <div class="footer">Tappa completata ✓ · 日本を発見しよう</div>
+</div>
+</body>
+</html>

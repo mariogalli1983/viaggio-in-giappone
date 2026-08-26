@@ -1,55 +1,75 @@
 
 :root{
-  --paper:#f6f0e4;
-  --ink:#1f1c18;
-  --red:#b33a2f;
-  --muted:#746d63;
-  --card:#fffaf2;
+ --paper:#f6efe2; --ink:#201d18; --red:#b6382e; --muted:#746a5e;
+ --line:#d8c9b5; --card:rgba(255,251,244,.86); --green:#48634f;
 }
 *{box-sizing:border-box}
+html{scroll-behavior:smooth}
 body{
-  margin:0;
-  font-family: Georgia, "Times New Roman", serif;
-  background:linear-gradient(180deg,#f8f3ea 0%,#efe5d5 100%);
-  color:var(--ink);
+ margin:0; color:var(--ink);
+ font-family:Georgia,"Times New Roman",serif;
+ background:
+   radial-gradient(circle at 85% 8%, rgba(182,56,46,.06) 0 90px, transparent 91px),
+   linear-gradient(180deg,#faf6ee,#f0e4d1);
+ min-height:100vh;
 }
-.wrap{max-width:760px;margin:auto;padding:24px 18px 48px}
-.hero{text-align:center;padding:28px 8px 20px}
-.jp{font-size:2.2rem;letter-spacing:.08em;color:var(--red);margin-bottom:6px}
-h1{font-size:2.2rem;margin:.15em 0}
-.subtitle{font-style:italic;color:var(--muted);font-size:1.05rem}
-.symbol{font-size:4rem;margin:18px 0 6px}
+.wrap{max-width:760px;margin:auto;padding:20px 18px 54px}
+.homewrap{max-width:980px}
+.hero{text-align:center;padding:26px 8px 14px}
+.jp{font-size:2.05rem;letter-spacing:.12em;color:var(--red)}
+h1{font-size:2.25rem;margin:.14em 0 .1em;line-height:1.05}
+.subtitle{font-style:italic;color:var(--muted);font-size:1.04rem}
+.art{
+ position:relative;width:100%;height:190px;margin:18px auto 24px;
+ overflow:hidden;border-radius:22px;border:1px solid var(--line);
+ background:linear-gradient(#fbf6ed 0 64%,#e9ddca 64%);
+}
+.sun{position:absolute;width:92px;height:92px;border-radius:50%;background:var(--red);opacity:.9;right:14%;top:25px}
+.fuji-mountain{position:absolute;left:50%;bottom:30px;transform:translateX(-50%);width:0;height:0;
+ border-left:170px solid transparent;border-right:170px solid transparent;border-bottom:130px solid #4d4a52}
+.fuji-snow{position:absolute;left:50%;bottom:112px;transform:translateX(-50%);width:0;height:0;
+ border-left:55px solid transparent;border-right:55px solid transparent;border-bottom:43px solid #fffaf2}
+.fuji-base{position:absolute;left:8%;right:8%;bottom:22px;height:20px;border-radius:50%;background:#7b8a70;opacity:.65}
+.brush{width:74px;height:4px;background:var(--red);border-radius:50%;margin:16px auto 0;opacity:.9}
 .card{
-  background:rgba(255,250,242,.92);
-  border:1px solid #d9cdbb;
-  border-radius:18px;
-  padding:20px;
-  margin:14px 0;
-  box-shadow:0 8px 24px rgba(60,40,20,.06)
+ background:var(--card);border:1px solid var(--line);border-radius:17px;
+ padding:17px 20px;margin:12px 0;box-shadow:0 8px 20px rgba(67,44,24,.045)
 }
-.label{font-size:.78rem;text-transform:uppercase;letter-spacing:.12em;color:var(--red);font-weight:700}
-.word{font-size:1.35rem;margin-top:5px}
+.label{font-size:.76rem;text-transform:uppercase;letter-spacing:.13em;color:var(--red);font-weight:700}
+.card p{margin:.55em 0 .1em;line-height:1.43}
+.word{font-size:1.35rem;margin-top:7px}
+.quiz{padding-bottom:20px}
+.quiz h2{font-size:1.55rem;margin:.55em 0 .8em}
 .quiz button{
-  width:100%;
-  text-align:left;
-  padding:14px 15px;
-  margin:7px 0;
-  border:1px solid #ccbda7;
-  border-radius:12px;
-  background:#fffdf9;
-  font-size:1rem;
-  cursor:pointer;
+ width:100%;padding:13px 15px;margin:6px 0;border:1px solid #cdbba3;border-radius:11px;
+ background:#fffdfa;color:var(--ink);font-size:1rem;text-align:left;cursor:pointer;
+ transition:.15s ease
 }
-.quiz button:hover{transform:translateY(-1px)}
-.result{margin-top:12px;font-weight:700;min-height:1.4em}
-.back{display:inline-block;margin-top:18px;color:var(--red);text-decoration:none;font-weight:700}
-.footer{text-align:center;color:var(--muted);font-size:.88rem;padding:24px 0}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:14px}
-.place{display:block;text-decoration:none;color:inherit}
-.place .card{height:100%;transition:.15s}
-.place .card:hover{transform:translateY(-2px)}
-.smalljp{color:var(--red);font-size:1.15rem}
-@media (max-width:520px){
-  h1{font-size:1.85rem}
-  .jp{font-size:1.85rem}
+.quiz button:hover{transform:translateY(-1px);border-color:#ae8f69}
+.quiz button.correct{border-color:#6a8a71;background:#f2f7f1}
+.quiz button.wrong{border-color:#b8645e;background:#fbf1ef}
+.result{margin-top:12px;font-weight:700;min-height:1.35em}
+.complete{
+ display:none;margin:14px 0 4px;padding:15px 18px;border:1px solid #9fb09f;border-radius:13px;
+ background:#f1f6ef;color:#395340;text-align:center;font-weight:700
+}
+.complete.show{display:block}
+.back{display:inline-block;margin-top:16px;color:var(--red);text-decoration:none;font-weight:700}
+.footer{text-align:center;color:var(--muted);font-size:.86rem;padding:26px 0 0}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:13px;margin-top:22px}
+.place{text-decoration:none;color:inherit}
+.place .card{height:100%;min-height:155px;transition:.15s}
+.place .card:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(67,44,24,.075)}
+.smalljp{color:var(--red);font-size:1.05rem;letter-spacing:.06em}
+.place h2{font-size:1.55rem;margin:.55em 0 .4em}
+.home-mark{font-size:2rem;color:var(--red);margin-top:8px}
+@media(max-width:540px){
+ .wrap{padding-left:14px;padding-right:14px}
+ h1{font-size:1.92rem}.jp{font-size:1.72rem}
+ .art{height:155px}
+ .sun{width:70px;height:70px}
+ .fuji-mountain{border-left-width:135px;border-right-width:135px;border-bottom-width:103px}
+ .fuji-snow{bottom:95px;border-left-width:44px;border-right-width:44px;border-bottom-width:35px}
+ .card{padding:15px 16px}
+ .quiz h2{font-size:1.35rem}
 }
