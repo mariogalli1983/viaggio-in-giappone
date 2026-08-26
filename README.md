@@ -1,4 +1,4 @@
-# Viaggio in Giappone – versione 2
-Sostituisce i file della versione precedente.
-Novità: grafica più elegante, Fuji illustrato senza emoji, layout più compatto,
-quiz con evidenziazione risposta e 'Tappa completata' solo dopo la risposta.
+# Viaggio in Giappone – versione 3
+
+Aggiunge immagini coordinate per tutte le 10 tappe, ricavate dal concept grafico approvato.
+Carica tutto il contenuto di questa cartella nel repository, sovrascrivendo i file precedenti.
