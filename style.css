@@ -6,7 +6,15 @@ body{margin:0;background:linear-gradient(#faf6ef,#f0e4d2);color:var(--ink);font-
 .home{width:min(100%,920px);margin:auto;padding:26px 16px 42px}
 .brand{text-align:center;margin:4px 0 14px}.tabi{color:var(--red);font-size:.82rem;letter-spacing:.28em;font-weight:700}.sub{font-size:.8rem;color:var(--muted);margin-top:4px}
 .head{text-align:center;margin-bottom:12px}.jp{font-size:1.55rem;color:var(--red);letter-spacing:.12em}h1{font-size:2rem;margin:2px 0 0}.subtitle{font-size:.98rem;color:var(--muted);font-style:italic;margin-top:3px}
-.photo{width:100%;height:190px;object-fit:cover;object-position:center;border-radius:18px;border:1px solid var(--line);display:block;box-shadow:0 8px 20px rgba(50,32,18,.06)}
+.photo{
+  width:100%;
+  height:auto;
+  object-fit:contain;
+  border-radius:18px;
+  border:1px solid var(--line);
+  display:block;
+  box-shadow:0 8px 20px rgba(50,32,18,.06);
+}
 .card{background:rgba(255,250,242,.94);border:1px solid var(--line);border-radius:16px;padding:17px;margin-top:12px;box-shadow:0 7px 18px rgba(50,32,18,.045)}
 .kicker{font-size:.72rem;letter-spacing:.13em;color:var(--red);font-weight:700;text-transform:uppercase}.card p{font-size:1rem;line-height:1.46;margin:8px 0 0}
 .wordrow{display:flex;align-items:baseline;gap:10px;margin-top:10px}.kanji{font-size:1.55rem}.meaning{font-size:.95rem;color:var(--muted)}
