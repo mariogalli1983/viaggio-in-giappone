@@ -1,57 +1,168 @@
 <!doctype html>
-<html lang="it"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Benvenuti in Giappone</title><link rel="stylesheet" href="style.css"></head>
-<body><div class="wrap homewrap">
-<div class="hero"><div class="jp">日本へようこそ</div><div class="home-mark">●</div><h1>Benvenuti in Giappone</h1>
-<div class="subtitle">Un viaggio tra luoghi, storie e meraviglie</div><div class="brush"></div></div>
-<div class="grid"><a class="place" href="fuji/"><div class="card">
-      <div class="smalljp">富士山</div>
-      <h2>Monte Fuji</h2>
-      <div class="subtitle">La montagna sacra del Giappone</div>
-    </div></a>
-<a class="place" href="kyoto/"><div class="card">
-      <div class="smalljp">京都</div>
-      <h2>Kyoto</h2>
-      <div class="subtitle">Templi, giardini e antiche tradizioni</div>
-    </div></a>
-<a class="place" href="fushimi-inari/"><div class="card">
-      <div class="smalljp">伏見稲荷</div>
-      <h2>Fushimi Inari</h2>
-      <div class="subtitle">Il santuario dei torii rossi</div>
-    </div></a>
-<a class="place" href="arashiyama/"><div class="card">
-      <div class="smalljp">嵐山</div>
-      <h2>Arashiyama</h2>
-      <div class="subtitle">La foresta di bambù</div>
-    </div></a>
-<a class="place" href="nara/"><div class="card">
-      <div class="smalljp">奈良</div>
-      <h2>Nara</h2>
-      <div class="subtitle">La città dei cervi</div>
-    </div></a>
-<a class="place" href="miyajima/"><div class="card">
-      <div class="smalljp">宮島</div>
-      <h2>Miyajima</h2>
-      <div class="subtitle">Il torii che sembra galleggiare</div>
-    </div></a>
-<a class="place" href="himeji/"><div class="card">
-      <div class="smalljp">姫路</div>
-      <h2>Himeji</h2>
-      <div class="subtitle">Il castello bianco</div>
-    </div></a>
-<a class="place" href="shirakawa-go/"><div class="card">
-      <div class="smalljp">白川郷</div>
-      <h2>Shirakawa-go</h2>
-      <div class="subtitle">Il villaggio tra le montagne</div>
-    </div></a>
-<a class="place" href="tokyo/"><div class="card">
-      <div class="smalljp">東京</div>
-      <h2>Tokyo</h2>
-      <div class="subtitle">Dall’antica Edo alla metropoli</div>
-    </div></a>
-<a class="place" href="okinawa/"><div class="card">
-      <div class="smalljp">沖縄</div>
-      <h2>Okinawa</h2>
-      <div class="subtitle">Il Giappone tropicale</div>
-    </div></a></div>
-<div class="footer">日本を発見しよう · Scopriamo il Giappone</div></div></body></html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Fuji · Tabi</title>
+<style>
+:root{
+  --paper:#f6efe3;
+  --card:#fffaf2;
+  --ink:#242019;
+  --red:#b63b30;
+  --muted:#786f63;
+  --line:#d9c9b3;
+  --green:#40604a;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;
+  background:linear-gradient(#faf6ef,#f0e4d2);
+  color:var(--ink);
+  font-family:Georgia,"Times New Roman",serif;
+}
+.page{
+  width:min(100%,520px);
+  margin:auto;
+  padding:18px 14px 32px;
+}
+.brand{text-align:center;margin:4px 0 14px}
+.brand .tabi{color:var(--red);font-size:.82rem;letter-spacing:.28em;font-weight:700}
+.brand .sub{font-size:.8rem;color:var(--muted);margin-top:4px}
+.head{text-align:center;margin-bottom:12px}
+.jp{font-size:1.55rem;color:var(--red);letter-spacing:.12em}
+h1{font-size:2rem;margin:2px 0 0}
+.subtitle{font-size:.98rem;color:var(--muted);font-style:italic;margin-top:3px}
+.photo{
+  width:100%;
+  height:190px;
+  object-fit:cover;
+  object-position:center 46%;
+  border-radius:18px;
+  border:1px solid var(--line);
+  display:block;
+  box-shadow:0 8px 20px rgba(50,32,18,.06);
+}
+.card{
+  background:rgba(255,250,242,.94);
+  border:1px solid var(--line);
+  border-radius:16px;
+  padding:17px;
+  margin-top:12px;
+  box-shadow:0 7px 18px rgba(50,32,18,.045);
+}
+.kicker{
+  font-size:.72rem;
+  letter-spacing:.13em;
+  color:var(--red);
+  font-weight:700;
+  text-transform:uppercase;
+}
+.card p{font-size:1rem;line-height:1.46;margin:8px 0 0}
+.wordrow{
+  display:flex;
+  align-items:baseline;
+  gap:10px;
+  margin-top:10px;
+}
+.kanji{font-size:1.55rem}
+.meaning{font-size:.95rem;color:var(--muted)}
+.divider{height:1px;background:#eadfce;margin:15px 0}
+.quiz h2{font-size:1.28rem;margin:8px 0 12px}
+button{
+  width:100%;
+  margin:5px 0;
+  padding:12px 14px;
+  border:1px solid #ccb99f;
+  border-radius:11px;
+  background:#fffdf9;
+  color:var(--ink);
+  font-size:1rem;
+  text-align:left;
+}
+button.correct{background:#edf5ee;border-color:#79947f}
+button.wrong{background:#faefed;border-color:#b96b62}
+.result{font-weight:700;margin-top:10px;min-height:1.3em}
+.complete{
+  display:none;
+  margin-top:12px;
+  padding:13px;
+  text-align:center;
+  border-radius:12px;
+  background:#edf5ee;
+  border:1px solid #91aa95;
+  color:var(--green);
+  font-weight:700;
+}
+.complete.show{display:block}
+.back{
+  display:block;
+  text-align:center;
+  color:var(--red);
+  text-decoration:none;
+  font-weight:700;
+  margin-top:18px;
+}
+.footer{text-align:center;color:var(--muted);font-size:.78rem;margin-top:22px}
+</style>
+<script>
+function answer(btn,ok){
+  const buttons=[...document.querySelectorAll('.quiz button')];
+  if(document.body.dataset.done==='1') return;
+  buttons.forEach(b=>b.disabled=true);
+  if(ok){
+    btn.classList.add('correct');
+    document.querySelector('.result').textContent='正解! Seikai! Risposta esatta.';
+  }else{
+    btn.classList.add('wrong');
+    buttons[0].classList.add('correct');
+    document.querySelector('.result').textContent='Quasi! Il Monte Fuji è alto 3.776 metri.';
+  }
+  document.body.dataset.done='1';
+  document.querySelector('.complete').classList.add('show');
+}
+</script>
+</head>
+<body>
+<div class="page">
+  <div class="brand">
+    <div class="tabi">旅 · TABI</div>
+    <div class="sub">Il viaggio in Giappone</div>
+  </div>
+
+  <div class="head">
+    <div class="jp">富士山</div>
+    <h1>Monte Fuji</h1>
+    <div class="subtitle">La montagna sacra del Giappone</div>
+  </div>
+
+  <img class="photo" src="fuji.jpg" alt="Monte Fuji con ciliegi in fiore">
+
+  <section class="card">
+    <div class="kicker">Lo sapevi che?</div>
+    <p>Il Fuji è un vulcano alto <strong>3.776 metri</strong>, la montagna più alta del Giappone. Da secoli è considerato un luogo speciale e ha ispirato artisti, pellegrini e viaggiatori.</p>
+
+    <div class="divider"></div>
+
+    <div class="kicker">Parola del viaggio</div>
+    <div class="wordrow">
+      <div class="kanji">山 — yama</div>
+      <div class="meaning">montagna</div>
+    </div>
+  </section>
+
+  <section class="card quiz">
+    <div class="kicker">La sfida</div>
+    <h2>Quanto è alto il Monte Fuji?</h2>
+    <button onclick="answer(this,true)">3.776 metri</button>
+    <button onclick="answer(this,false)">2.945 metri</button>
+    <button onclick="answer(this,false)">4.121 metri</button>
+    <div class="result"></div>
+    <div class="complete">✓ Tappa completata</div>
+  </section>
+
+  <a class="back" href="#">← Torna al viaggio</a>
+  <div class="footer">日本を発見しよう · Scopriamo il Giappone</div>
+</div>
+</body>
+</html>
